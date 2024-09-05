@@ -1,14 +1,14 @@
-import { useState } from 'react'
 import Main from '../pages/Main'
 import '@/styles/globa.css'
+import { Provider, createStore } from 'jotai';
+const myStore = createStore();
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <Provider store={myStore}>
       <Main />
-    </>
+    </Provider>
   )
 }
 

@@ -1,8 +1,25 @@
+import { isOpenSidebarAtom } from "@/store/menuAtom"
+import { useAtomValue, useSetAtom } from "jotai"
+
 const Header = () => {
+  const isOpen = useAtomValue(isOpenSidebarAtom)
+  const setIsOpen = useSetAtom(isOpenSidebarAtom)
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleMenuBtnChange = () => {
+    // Esta función no es estrictamente necesaria en React, pero puede servir para manejar iconos adicionales si los usas.
+    return isOpen ? 'bx-menu-alt-left' : 'bx-menu';
+  };
+
   return (
     <header>
-
-      <div className="logo-details">
+      <div className="logo-details" onClick={toggleSidebar}>
+        <i className={`bx ${handleMenuBtnChange()}`} id="btn"></i>
+      </div>
+      <div className="">
         <i className='bx bx-menu' id="btn"></i>
       </div>
 
