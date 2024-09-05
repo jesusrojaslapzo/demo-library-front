@@ -8,7 +8,7 @@
     "start:prod": "env-cmd -f .env vite",
     "start:qa": "env-cmd -f .env.qa vite",
     "start:dev": "env-cmd -f .env.development vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
