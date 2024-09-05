@@ -474,6 +474,18 @@ header .logo-details {
     padding: 16px; 
   }
 
+  .sidebar{
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    left: -1rem;
+  }
+  
+  .sidebar.open{
+    width: 100%;
+    left: 0;
+  }
+
   .column-all {
     grid-column: span 6;
   }
@@ -496,18 +508,6 @@ header .logo-details {
 @media screen and (max-width: 479px) {
   .home-section {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .sidebar{
-    position: absolute;
-    width: 0;
-    overflow: hidden;
-    left: -1rem;
-  }
-  
-  .sidebar.open{
-    width: 100%;
-    left: 0;
   }
 
   .column-all {
