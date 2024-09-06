@@ -1,0 +1,23 @@
+.explorerCardWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.explorerTitle {
+  color: #0C0C1A;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.18px;
+}
+
+.explorerHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

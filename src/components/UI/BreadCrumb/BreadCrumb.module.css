@@ -1,0 +1,20 @@
+.breadCrumb {
+  display: flex;
+}
+
+.breadCrumList {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.breadCrumList a,
+.breadCrumList span{
+  color: #6E7191;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}

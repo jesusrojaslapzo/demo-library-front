@@ -13,37 +13,6 @@ body {
   overflow: hidden;
 }
 
-header {
-  width: 100%;
-  height: 60px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #EEEFF4;
-}
-
-header img {
-  width: 100px;
-  margin-left: 12px;
-}
-
-header .busqueda {
-  display: flex;
-  align-items: center;
-  margin: auto;
-  padding: 10px 12px;
-  border-radius: 12px;
-  background-color: #F8F8FB;
-  border: 1px solid #EEEFF4;
-  gap: 8px;
-  width: 50%;
-}
-
-header .busqueda:focus-within {
-  border: 1px solid black;
-  transition: all 0.5s ease;
-}
-
 .items {
   height: 100%;
   padding: 12px 40px;
@@ -84,19 +53,6 @@ ul.elements {
   background: #EFF0F6;
 }
 
-header .search-input {
-  font-size: 14px;
-  outline: none;
-  border: none;
-  background: transparent;
-  width: 100%;
-
-}
-
-header .search-input::placeholder {
-  color: #A0A3BD;
-}
-
 .bx-search {
   color: #A0A3BD;
   font-size: 18px;
@@ -105,20 +61,6 @@ header .search-input::placeholder {
 .bx-filter {
   font-size: 20px;
   font-weight: 400;
-}
-
-header .logos {
-  display: flex;
-}
-
-header .logo-details {
-  height: 100%;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  color: black;
 }
 
 .bx {
@@ -378,7 +320,7 @@ header .logo-details {
 
 .home-section {
   position: relative;
-  display: grid;
+  background: #F7F8F9;
   width: 100%;
   transition: all 0.5s ease;
   height: 100%;
@@ -387,6 +329,10 @@ header .logo-details {
   overflow-y: auto;
   max-width: 1768px;
   margin: 0 auto;
+  height: calc(100vh - 60px); 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .card-content {

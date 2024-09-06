@@ -1,0 +1,23 @@
+.tabs {
+}
+
+.tabsItem {
+  padding: 12px;
+  color: #6E7191;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  background: none;
+  border: none;
+  margin: none;
+  border-bottom: 1.8px solid transparent;
+  transition: .3s;
+  border-radius: 0;
+}
+
+.tabsItemActive {
+  color: #6D29FF;
+  border-bottom-color: #6D29FF;
+}

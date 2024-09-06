@@ -1,5 +1,6 @@
 import { isOpenSidebarAtom } from "@/store/menuAtom"
 import { useAtomValue, useSetAtom } from "jotai"
+import styles from './Header.module.css'
 
 const Header = () => {
   const isOpen = useAtomValue(isOpenSidebarAtom)
@@ -15,23 +16,19 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <div className="logo-details" onClick={toggleSidebar}>
+    <header className={styles.header}>
+      <div className={styles.logoDetails} onClick={toggleSidebar}>
         <i className={`bx ${handleMenuBtnChange()}`} id="btn"></i>
       </div>
-      <div className="">
-        <i className='bx bx-menu' id="btn"></i>
-      </div>
 
-
-      <div className="logos">
+      <div className={styles.logos}>
         <img
           src="https://cdn.prod.website-files.com/62bbfb429eaf728cd08009f8/65aacf48bde4467e127570ba_logo-lapzo2-p-500.png"
           alt="" />
       </div>
-      <div className="busqueda">
+      <div className={styles.searchBar}>
         <i className='bx bx-search'></i>
-        <input className="search-input" placeholder="Comienza a buscar..." />
+        <input className={styles.searchInput} placeholder="Comienza a buscar..." />
         <i className='bx bx-filter'></i>
       </div>
 
