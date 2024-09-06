@@ -23,7 +23,7 @@ const Header = () => {
 
       <div className={styles.logos}>
         <img
-          src="https://cdn.prod.website-files.com/62bbfb429eaf728cd08009f8/65aacf48bde4467e127570ba_logo-lapzo2-p-500.png"
+          src="https://firebasestorage.googleapis.com/v0/b/lernit-v2.appspot.com/o/assets%2Fclients%2Fteam%2Flogo_lapzo_blanco.png?alt=media&token=abda92c1-bfde-41a1-aaf0-66b22877e68c"
           alt="" />
       </div>
       <div className={styles.searchBar}>

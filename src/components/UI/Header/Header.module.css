@@ -1,10 +1,16 @@
 .header {
   width: 100%;
   height: 60px;
-  background: #fff;
+  //background: #fff;
+  background: #14142A;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #EEEFF4;
+}
+
+.header :global(.bx) {
+  color: white !important;
 }
 
 .header img {
@@ -22,6 +28,7 @@
   border: 1px solid #EEEFF4;
   gap: 8px;
   width: 50%;
+  display: none;
 }
 
 .searchBar:focus-within {
@@ -31,6 +38,7 @@
 
 .logos {
   display: flex;
+  flex: 1;
 }
 
 .logoDetails {
