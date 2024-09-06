@@ -1,0 +1,26 @@
+.landingPage {
+  color: #4E4B66;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 100px;
+}
+
+.landingPageTitle {
+  color: #0C0C1A;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.18px;
+}
+
+.landingPageSubtitle {
+  color: #4E4B66;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.16px;
+}
