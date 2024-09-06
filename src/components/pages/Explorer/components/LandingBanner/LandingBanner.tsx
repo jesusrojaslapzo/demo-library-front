@@ -1,4 +1,5 @@
 import clockIcon from '@/assets/timer.png'
+import playIcon from '@/assets/player-control-play.png'
 import Items from './components/Items'
 import styles from './LandingBanner.module.css'
 
@@ -6,16 +7,17 @@ const LadingBanner = () => {
 
   return (
     <article className={styles.landingBanner}>
-      <header>
-        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDI5MnwwfDF8c2VhcmNofDI5fHx3YWxscGFwZXJ8ZW58MHx8fHwxNzI1NDY4OTU4fDA&ixlib=rb-4.0.3&q=80&w=1080" />
-        <div>
-          <div></div>
+      <header className={styles.landingBannerHeader}>
+        <div className={styles.landingBannerPreview}>
+          <div className={styles.landingBannerPlay}>
+            <img src={playIcon} />
+          </div>
           <span>Vista previa del curso</span>
         </div>
       </header>
-      <section>
+      <section className={styles.landingBannerBody}>
         <h4>Este curso incluye</h4>
-        <div>
+        <div className={styles.landingBannerInfo}>
           <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
           <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
           <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
@@ -23,13 +25,13 @@ const LadingBanner = () => {
           <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
           <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
         </div>
-        <div>
+        <div className={styles.landingBannerItems}>
           <Items />
           <Items />
         </div>
       </section>
-      <footer>
-        <button>Inscribirme</button>
+      <footer className={styles.landingBannerFooter}>
+        <button className={styles.landingBannerButton}>Inscribirme</button>
       </footer>
     </article>
   )
