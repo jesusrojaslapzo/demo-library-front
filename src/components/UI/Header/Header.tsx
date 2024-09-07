@@ -2,6 +2,7 @@ import { isOpenSidebarAtom } from "@/store/menuAtom"
 import { useAtomValue, useSetAtom } from "jotai"
 import styles from './Header.module.css'
 import logo from '@/assets/logo-lapzo-blanco.png'
+import { Link } from "react-router-dom"
 
 const Header = () => {
   const isOpen = useAtomValue(isOpenSidebarAtom)
@@ -23,11 +24,11 @@ const Header = () => {
       </div>
 
       <div className={styles.logos}>
-        <a href="/">
+        <Link to="/">
           <img
             src={logo}
             alt="" />
-        </a>
+        </Link>
       </div>
       <div className={styles.searchBar}>
         <i className='bx bx-search'></i>

@@ -11,7 +11,7 @@ const LandingPage = () => {
     <Wrapper>
       <section className={`column-l-8 column-m-7 column-s-all column-xss-all ${styles.landingPage}`}>
         <div className={styles.landingPageBreadcrum}>
-          <BreadCrumb />
+          <BreadCrumb items={3} />
         </div>
         <h1 className={styles.landingPageTitle}>
           Lapzo jumpstart: aprendiendo a volar juntos

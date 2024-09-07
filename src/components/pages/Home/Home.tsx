@@ -1,9 +1,14 @@
 import Wrapper from "@/components/Layout/Wrapper"
+import BreadCrumb from "@/components/UI/BreadCrumb"
 import Card from "@/components/UI/Card"
 
 const Home = () => {
   return (
     <Wrapper>
+
+      <div className="column-all">
+        <BreadCrumb items={1} />
+      </div>
       <Card className="column-all" title="Colum Span 1" description="Esta es una card de contenido para columnas" />
       <Card className="column-m-6 column-s-3 column-xxs-all" title="Colum Span 2" description="Esta es una card de contenido para columnas" />
       <Card className="column-m-6 column-s-3 column-xxs-all" title="Colum Span 3" description="Esta es una card de contenido para columnas" />
