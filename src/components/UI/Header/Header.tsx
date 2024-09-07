@@ -1,6 +1,7 @@
 import { isOpenSidebarAtom } from "@/store/menuAtom"
 import { useAtomValue, useSetAtom } from "jotai"
 import styles from './Header.module.css'
+import logo from '@/assets/logo-lapzo-blanco.png'
 
 const Header = () => {
   const isOpen = useAtomValue(isOpenSidebarAtom)
@@ -22,9 +23,11 @@ const Header = () => {
       </div>
 
       <div className={styles.logos}>
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/lernit-v2.appspot.com/o/assets%2Fclients%2Fteam%2Flogo_lapzo_blanco.png?alt=media&token=abda92c1-bfde-41a1-aaf0-66b22877e68c"
-          alt="" />
+        <a href="/">
+          <img
+            src={logo}
+            alt="" />
+        </a>
       </div>
       <div className={styles.searchBar}>
         <i className='bx bx-search'></i>

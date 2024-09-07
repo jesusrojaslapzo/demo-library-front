@@ -1,8 +1,5 @@
 .landingPage {
   color: #4E4B66;
-  display: grid;
-  grid-template-columns: 5fr 2fr;
-  gap: 100px;
 }
 
 .landingPageTitle {
@@ -25,4 +22,15 @@
   line-height: 24px; /* 150% */
   letter-spacing: 0.16px;
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .landingPageTitle,
+  .landingPageSubtitle {
+    display: none;
+  }
+
+  .landingPageBreadcrum {
+    display: none;
+  }
 }

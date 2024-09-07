@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './BreadCrumb.module.css'
 
 const BreadCrumb = () => {
@@ -5,13 +6,13 @@ const BreadCrumb = () => {
     <nav className={styles.breadCrumb}>
       <ul className={styles.breadCrumList}>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <span>/</span>
         </li>
         <li>
-          <a href="/explorer">Explorador</a>
+          <Link to="/explorer">Explorador</Link>
         </li>
       </ul>
     </nav>

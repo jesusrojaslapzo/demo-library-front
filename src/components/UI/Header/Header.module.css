@@ -39,6 +39,10 @@
 .logos {
   display: flex;
   flex: 1;
+
+  & a {
+    display: flex;
+  }
 }
 
 .logoDetails {

@@ -120,3 +120,84 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (min-width: 1024px) {
+  .landingBannerButtonPreview {
+    display: none;
+  }
+  .landingBannerHero {
+    display: none;
+  }
+
+  .landingBreadcrumb {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+  .landingBannerBody,
+  .landingBannerHeader,
+  .landingBannerInfo{
+    display: none;
+  }
+
+  .landingBanner {
+    background: linear-gradient(90deg, rgba(20, 20, 42, 1) 0%, rgba(20, 20, 42, 1) 60%, rgba(20, 20, 42, 0) 100%),               url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDI5MnwwfDF8c2VhcmNofDI5fHx3YWxscGFwZXJ8ZW58MHx8fHwxNzI1NDY4OTU4fDA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat bottom;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .landingBannerHero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .landingBannerHero h1 {
+    color: white;
+    font-family: Poppins;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem; /* 145.455% */
+    letter-spacing: 0.01375rem;
+  }
+
+  .landingBannerHero h4 {
+    color: #A996FF;
+    font-family: Poppins;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1rem; /* 123.077% */
+    letter-spacing: 0.00206rem;
+  }
+
+  .landingBannerFooter {
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+  }
+
+
+  .landingBannerButtonPreview {
+    background: none;
+    border-radius: 0.5rem;
+    border: 1.8px solid #A996FF;
+    color: #A996FF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem; /* 125% */
+    letter-spacing: -0.005rem;
+  }
+
+  .landingBannerButton {
+    width: auto;
+  }
+}
