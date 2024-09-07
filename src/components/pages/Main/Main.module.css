@@ -10,5 +10,6 @@
 .mainContent {
   height: calc(100vh - 60px);
   overflow-y: auto;
+  width: 100%;
 }
 
