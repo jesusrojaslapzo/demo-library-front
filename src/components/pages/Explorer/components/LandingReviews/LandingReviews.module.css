@@ -1,11 +1,11 @@
 .landingReview {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1.25rem 1rem;
   border-bottom: 1px solid #E0E0E0;
   margin-bottom: 1rem;
   background: white;
-  border-radius: 10px;
+  border-radius: 0.75rem;
   align-items: center;
 }
 

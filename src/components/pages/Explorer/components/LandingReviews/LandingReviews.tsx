@@ -13,7 +13,6 @@ const LandingReviews = () => {
           alignItems: "center",
           alignContent: "center",
           gap: "1rem",
-          padding: "10px",
         }}
       >
         <img src={brand} />
