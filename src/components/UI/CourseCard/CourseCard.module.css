@@ -111,7 +111,7 @@
 .cardBrand span {
   color: #0C0C1A;
   font-family: Poppins;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 16px; /* 133.333% */
@@ -201,6 +201,10 @@
 
   .cardInfoFooter {
     display: none;
+  }
+
+  .cardBrand span {
+    font-size: 12px;
   }
 
   .cardCallToAction {

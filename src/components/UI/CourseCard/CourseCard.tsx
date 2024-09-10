@@ -5,14 +5,18 @@ import saveButton from '@/assets/save-button.png'
 import { useNavigate } from 'react-router-dom'
 import { EXPLORER_LANDING } from '@/routes/paths/all-paths'
 
-const CourseCard = () => {
+interface CourseCardProps {
+  image: string
+}
+
+const CourseCard = ({ image }: CourseCardProps) => {
   const navigate = useNavigate()
 
   return (
     <article className={styles.card} onClick={() => navigate(EXPLORER_LANDING)}>
       <header className={styles.cardHeader}>
         <img
-          src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDI5MnwwfDF8c2VhcmNofDI5fHx3YWxscGFwZXJ8ZW58MHx8fHwxNzI1NDY4OTU4fDA&ixlib=rb-4.0.3&q=80&w=1080"
+          src={image}
         />
         <span className={styles.cardBadgeNew}>new</span>
       </header>
