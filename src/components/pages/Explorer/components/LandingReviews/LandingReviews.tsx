@@ -1,18 +1,11 @@
 import brand from '@/assets/Brand.png'
 import star from '@/assets/star.png'
+import styles from './LandingReviews.module.css'
 
 const LandingReviews = () => {
   return (
     <section
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        padding: "1rem 0",
-        borderBottom: "1px solid #E0E0E0",
-        marginBottom: "1rem",
-        background: "white",
-        borderRadius: "10px",
-      }}
+      className={styles.landingReview}
     >
       <div
         style={{
@@ -26,7 +19,13 @@ const LandingReviews = () => {
         <img src={brand} />
         <span>Tu Plataforma</span>
 
-        <div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem'
+          }}
+        >
           <img src={star} />
           <span>4.81 (252)</span>
         </div>
@@ -40,7 +39,7 @@ const LandingReviews = () => {
             fontWeight: 400,
           }}
         >
-          New
+          Certificado por: Lapzo
         </span>
       </div>
     </section>

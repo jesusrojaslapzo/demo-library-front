@@ -1,10 +1,32 @@
-import clockIcon from '@/assets/timer.png'
 import playIcon from '@/assets/player-control-play.png'
 import Items from './components/Items'
 import styles from './LandingBanner.module.css'
 import BreadCrumb from '@/components/UI/BreadCrumb'
+import { useEffect, useRef } from 'react'
+import parse from 'html-react-parser';
 
-const LadingBanner = () => {
+interface BannerInfo {
+  image: string;
+  description: string
+}
+
+interface LandingBannerProps {
+  bannerInfo: BannerInfo[]
+}
+
+const LadingBanner = ({ bannerInfo }: LandingBannerProps) => {
+  const bannerRef = useRef(null);
+
+  const backgroundUrl = "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDI5MnwwfDF8c2VhcmNofDI5fHx3YWxscGFwZXJ8ZW58MHx8fHwxNzI1NDY4OTU4fDA&ixlib=rb-4.0.3&q=80&w=1080"
+
+  useEffect(() => {
+    if (bannerRef.current) {
+      bannerRef.current.style.setProperty(
+        "--background-image",
+        `url(${backgroundUrl})`
+      );
+    }
+  }, [backgroundUrl]);
 
   return (
     <div className="column-m-7 column-m-3 column-4 column-m-end column-s-all row-s-begin">
@@ -12,7 +34,7 @@ const LadingBanner = () => {
         <BreadCrumb />
         <br />
       </div>
-      <article className={`${styles.landingBanner}`}>
+      <article className={`${styles.landingBanner}`} ref={bannerRef}>
         <header className={styles.landingBannerHeader}>
           <div className={styles.landingBannerPreview}>
             <div className={styles.landingBannerPlay}>
@@ -28,12 +50,12 @@ const LadingBanner = () => {
         <section className={styles.landingBannerBody}>
           <h4>Este curso incluye</h4>
           <div className={styles.landingBannerInfo}>
-            <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
-            <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
-            <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
-            <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
-            <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
-            <p><img src={clockIcon} /> <span>Duración: 60m 48s</span></p>
+            {
+              bannerInfo.map((info) => (
+                <p><img src={info.image} /> <span>{parse(info.description)}</span></p>
+
+              ))
+            }
           </div>
           <div className={styles.landingBannerItems}>
             <Items />

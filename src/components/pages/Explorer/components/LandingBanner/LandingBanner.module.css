@@ -8,7 +8,7 @@
 }
 
 .landingBannerPreview {
-  background: linear-gradient(180deg, rgba(20, 20, 42, 0.00) 0%, #14142A 95%), url(https://images.unsplash.com/photo-1500375592092-40eb2168fd21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDI5MnwwfDF8c2VhcmNofDI5fHx3YWxscGFwZXJ8ZW58MHx8fHwxNzI1NDY4OTU4fDA&ixlib=rb-4.0.3&q=80&w=1080) lightgray -21.585px -8.426px / 136.897% 124.31% no-repeat;
+  background: linear-gradient(180deg, rgba(20, 20, 42, 0.00) 0%, #14142A 95%), var(--background-image) lightgray -21.585px -8.426px / 136.897% 124.31% no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -77,6 +77,11 @@
   gap: 1.25rem;
 }
 
+.landingBannerInfo strong {
+  font-weight: 300;
+  color: #A996FF;
+}
+
 .landingBannerInfo p {
   display: flex;
   align-items: center;
@@ -143,7 +148,7 @@
   }
 
   .landingBanner {
-    background: linear-gradient(90deg, rgba(20, 20, 42, 1) 0%, rgba(20, 20, 42, 1) 60%, rgba(20, 20, 42, 0) 100%),               url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDI5MnwwfDF8c2VhcmNofDI5fHx3YWxscGFwZXJ8ZW58MHx8fHwxNzI1NDY4OTU4fDA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat bottom;
+    background: linear-gradient(90deg, rgba(20, 20, 42, 1) 0%, rgba(20, 20, 42, 1) 60%, rgba(20, 20, 42, 0) 100%),  var(--background-image) no-repeat bottom;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -199,5 +204,23 @@
 
   .landingBannerButton {
     width: auto;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .landingBanner {
+    min-height: 15.125rem;
+    background: linear-gradient(180deg, rgba(20, 20, 42, 0.00) 0%, #14142A 95%), var(--background-image) lightgray -21.585px -8.426px / 136.897% 124.31% no-repeat;
+    margin-left: -16px;
+    width: calc(100% + 32px);
+    border-radius: 0;
+  }
+
+  .landingBannerHero {
+    display: none;
+  }
+
+  .landingBannerFooter {
+    display: none;
   }
 }

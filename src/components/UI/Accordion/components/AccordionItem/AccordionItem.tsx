@@ -1,5 +1,7 @@
 import down from "@/assets/chevron-down.svg"
-const AcordionItem = ({title}:{title:string}) => {
+import styles from './AccordionItem.module.css'
+
+const AcordionItem = ({ title }: { title: string }) => {
   return (
     <section
       style={{
@@ -25,20 +27,17 @@ const AcordionItem = ({title}:{title:string}) => {
       </h4>
 
       <div
-        style={{
-          display: "flex",
-          gap: "1rem",
-        }}
+        className={styles.accordionItemInfo}
       >
         <span>8 lecciones</span>
         <span>30 m 24s</span>
         <span>Modulo1</span>
         <img
-        style={{
-          width: "18px",
-          height: "18px",
-        }}
-        src={down} alt="down" />
+          style={{
+            width: "18px",
+            height: "18px",
+          }}
+          src={down} alt="down" />
       </div>
     </section>
   );

@@ -6,7 +6,42 @@ import styles from './LandingPage.module.css'
 import Wrapper from "@/components/Layout/Wrapper"
 import Icon from '@/assets/Icon.svg'
 
+import timer from '@/assets/timer.png'
+import connectionWeb from '@/assets/connection-web.png'
+import graph from '@/assets/graph-bar-increase.png'
+import file from '@/assets/file.png'
+import flag from '@/assets/alert-flag-bannor.png'
+import playerControl from '@/assets/player-control-subtitles.png'
+
+const BANNER_INFO = [
+  {
+    image: timer,
+    description: 'Duración: 60m 48s'
+  },
+  {
+    image: connectionWeb,
+    description: 'Modalidad: Online'
+  },
+  {
+    image: graph,
+    description: 'Nivel <strong>Avanzado</strong>'
+  },
+  {
+    image: file,
+    description: '4 recursos descargables'
+  },
+  {
+    image: flag,
+    description: 'Idioma <strong>Español</strong>'
+  },
+  {
+    image: playerControl,
+    description: 'Subtítulos <strong>Español [automático]</strong>'
+  },
+]
+
 const LandingPage = () => {
+
   return (
     <Wrapper>
       <section className={`column-l-8 column-m-7 column-s-all column-xss-all ${styles.landingPage}`}>
@@ -47,7 +82,7 @@ const LandingPage = () => {
             <img src={Icon} />
             <p
               style={{
-                fontWeight: 300,
+                fontWeight: 400,
                 fontSize: "16px",
                 lineHeight: "28px",
                 letterSpacing: "0.01em",
@@ -63,6 +98,31 @@ const LandingPage = () => {
             </p>
           </section>
         </div>
+        <section>
+          {/*
+          <h2>Información del curso</h2>
+          <ul>
+            <li>
+              <img />
+              <p></p>
+            </li>
+            <li>
+              <img />
+              <p></p>
+            </li>
+            <li>
+              <a>
+                <img />
+                <p></p>
+              </a>
+            </li>
+          </ul>
+          <div>
+            <button>Vista previa del curso</button>
+            <button>Inscribirme</button>
+          </div>
+       */ }
+        </section>
         <div
           style={{
             gap: "8px",
@@ -93,7 +153,7 @@ const LandingPage = () => {
           >
             <span>2 Módulos</span>
             <span>18 lecciones</span>
-            <span>60m 48s de duración total</span>
+            <span>60m 48s <span className={styles.landingPageInfoHidde}>de duración total</span></span>
           </p>
           <Accordion />
         </div>
@@ -110,7 +170,15 @@ const LandingPage = () => {
           >
             Descripción del curso
           </h2>
-          <p>
+          <p
+            style={{
+              fontWeight: 400,
+              fontSize: "16px",
+              lineHeight: "28px",
+              letterSpacing: "0.01em",
+
+            }}
+          >
             ¡Bienvenido/a a bordo! Como nuevo/a colaborador/a, queremos que
             empieces con el pie derecho y estés preparado/a para destacar en
             tu rol y en nuestra cultura organizacional. Este curso de
@@ -126,7 +194,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <LadingBanner />
+      <LadingBanner bannerInfo={BANNER_INFO} />
     </Wrapper>
   );
 }

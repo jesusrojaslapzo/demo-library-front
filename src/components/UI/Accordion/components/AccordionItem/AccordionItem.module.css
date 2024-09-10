@@ -1,0 +1,10 @@
+.accordionItemInfo {
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 479px) {
+  .accordionItemInfo span {
+    display: none;
+  }
+}

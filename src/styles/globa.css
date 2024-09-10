@@ -462,7 +462,7 @@ ul.elements {
     position: absolute;
     width: 0;
     overflow: hidden;
-    left: -1rem;
+    left: -1.5rem;
   }
   
   .sidebar.open{
